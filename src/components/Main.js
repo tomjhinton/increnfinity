@@ -1,6 +1,4 @@
 import React from 'react'
-
-
 export const resourcesArr = []
 
 
@@ -122,7 +120,7 @@ class Main extends React.Component {
             resourcesArr.map(x => {
               return <div key={x.id} className='resources columns'>
                 <div  className ='column'>
-                  {x.building}
+                  {x.building} 
                 </div>
                 <div className ='column' onClick={this.buyBuilding} id={x.id}>
                   {x.amount}
