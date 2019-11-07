@@ -24,8 +24,9 @@ class Main extends React.Component {
 
 
   update(){
-    console.log(resourcesArr.reduce((a,b) => a.collected +b.collected,0))
-    resourcesArr.map(x=> x.collected += (x.id*x.amount))
+    let  total = resourcesArr.map(x => x = x.collected)
+    console.log(total.reduce((a,b)=> a+b,0))
+    resourcesArr.map(x=> x.collected += ((1/x.id)*x.amount))
     resourcesArr.map(x=> {
       if(x.collected > x.id*100){
         x.canCreate = true
@@ -142,11 +143,11 @@ class Main extends React.Component {
             <div className="modal-content">
               <form onSubmit={this.handleSubmit}>
                 <div className='title'>
-                Add a resorce to collect and something to produce it
+                Add a resource to collect and something to produce it ...
                 </div>
-                <input type="text" name="resource"  onChange={this.handleChange} placeholder='Resource' />
-                <input type="text" name="createdBy" onChange={this.handleChange} placeholder='Created By' />
-                <button onClick={this.handleSubmit}/>
+                <input type="text" name="resource"  onChange={this.handleChange} placeholder='RESOURCE' />
+                <input type="text" name="createdBy" onChange={this.handleChange} placeholder='CREATED BY' />
+                <div className="button" onClick={this.handleSubmit}>&#10003;</div>
               </form>
             </div>
           </div>}

@@ -19,7 +19,7 @@ class Sidebar extends React.Component {
 
     }
 
-
+    this.trade =  this.trade.bind(this)
 
   }
 
@@ -45,7 +45,12 @@ class Sidebar extends React.Component {
  if (n >= 1e12) return +(n / 1e12).toFixed(1) + "T";
 };
 
-
+  trade(e){
+    if(resourcesArr.length>e.target.id){
+      resourcesArr[e.target.id].collected +=  resourcesArr[e.target.id-1].collected/20
+      resourcesArr[e.target.id-1].collected = 0
+    }
+  }
 
 
   render() {
@@ -56,8 +61,13 @@ class Sidebar extends React.Component {
       <div className='sidebar'>
         {resourcesArr &&
           resourcesArr.map(x => {
-            return <div key={x.id} className='resources sidebarR'>
-              {x.resource}: {this.formatCash(x.collected.toFixed(1))}
+            return <div key={x.id} className='resources sidebarR columns'>
+              <div className='column'onClick={this.trade} id={x.id}>
+                &#8650;
+              </div>
+              <div className='column'>
+                {x.resource}: {this.formatCash(x.collected.toFixed(1))}
+              </div>
             </div>
           })}
       </div>

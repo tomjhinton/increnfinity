@@ -1,3 +1,7 @@
+*{
+  font-family: "Helvetica Neue"
+}
+
 
 .buy{
   border-left:  1px solid black;
@@ -38,4 +42,22 @@
 
 container{
   background: linear-gradient(180deg, rgba(2,0,36,0.39119397759103647) 50%, rgba(226,226,226,0.6292892156862745) 100%);
+}
+
+input{
+  padding: 1em;
+  margin: 1em;
+  font-size: 2em;
+}
+
+.modal-content{
+  .title{
+
+  color: rgba(220, 0, 0, 0.8);
+  }
+  .button{
+    width: 2em;
+    height: 2em;
+    border-color: rgba(220, 0, 0, 0.8);
+  }
 }
