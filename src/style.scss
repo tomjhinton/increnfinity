@@ -1,6 +1,4 @@
 
-
-
 .buy{
   border-left:  1px solid black;
   border-right:  1px solid black;
@@ -12,8 +10,6 @@
   flex-wrap: wrap;
   margin-top: 0.5em;
   margin-right: 20em;
-  height: calc(100vh - 200px);
-  overflow-y: auto;
 }
 
 
@@ -35,7 +31,7 @@
 }
 
 .sidebarR{
-  padding-left: 2em;
+  padding-left: 1em;
 
 }
 

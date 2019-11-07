@@ -24,6 +24,7 @@ class Main extends React.Component {
 
 
   update(){
+    console.log(resourcesArr.reduce((a,b) => a.collected +b.collected,0))
     resourcesArr.map(x=> x.collected += (x.id*x.amount))
     resourcesArr.map(x=> {
       if(x.collected > x.id*100){
