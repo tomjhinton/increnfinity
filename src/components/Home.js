@@ -7,6 +7,7 @@ import Sidebar from './Sidebar'
 const Home = () => {
   return(
     <section className="section">
+      <div className='title'>INCRENFINITY</div>
       <div className="container">
         <div className="columns">
           <div className="column is-one-quarter">

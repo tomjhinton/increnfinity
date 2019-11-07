@@ -1,17 +1,45 @@
 
-h1{
-  color: red;
+
+
+.buy{
+  border-left:  1px solid black;
+  border-right:  1px solid black;
+
 }
 
 .parent{
   display: inline-flex;
   flex-wrap: wrap;
+  margin-top: 0.5em;
+  margin-right: 20em;
+  height: calc(100vh - 200px);
+  overflow-y: auto;
 }
 
 
 .resources{
-  border: 1px solid black;
+  border: 2px solid black;
+  cursor: pointer;
+  margin: 1em;
+}
+
+.sidebar{
+  border-right:  5px solid black;
+  border-top:  5px solid black;
   padding: 2px;
   cursor: pointer;
-  margin: 5px
+  margin: 5px;
+  height: calc(100vh - 200px);
+  overflow-y: auto;
+
+}
+
+.sidebarR{
+  padding-left: 2em;
+
+}
+
+
+container{
+  background: linear-gradient(180deg, rgba(2,0,36,0.39119397759103647) 50%, rgba(226,226,226,0.6292892156862745) 100%);
 }

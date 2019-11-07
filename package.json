@@ -1,11 +1,14 @@
 {
-  "name": "incremental",
+  "name": "increnfinity",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "webpack-dev-server --mode=development"
+    "serve": "webpack-dev-server --mode=development",
+    "deploy": "gh-pages -d public",
+    "build": "webpack -p"
+
   },
   "author": "",
   "license": "ISC",
@@ -17,6 +20,7 @@
     "bulma": "^0.7.4",
     "copy-webpack-plugin": "^5.0.3",
     "css-loader": "^2.1.1",
+    "gh-pages": "^2.1.1",
     "html-webpack-plugin": "^3.2.0",
     "node-sass": "^4.11.0",
     "react": "^16.8.6",

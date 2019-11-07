@@ -24,7 +24,7 @@ class Main extends React.Component {
 
 
   update(){
-    resourcesArr.map(x=> x.collected += x.id*x.amount)
+    resourcesArr.map(x=> x.collected += (x.id*x.amount))
     resourcesArr.map(x=> {
       if(x.collected > x.id*100){
         x.canCreate = true
@@ -120,9 +120,13 @@ class Main extends React.Component {
             resourcesArr.map(x => {
               return <div key={x.id} className='resources columns'>
                 <div  className ='column'>
-                  {x.building} 
+                  {x.building}
                 </div>
-                <div className ='column' onClick={this.buyBuilding} id={x.id}>
+                <div className ='column buy' onClick={this.buyBuilding} id={x.id}
+                  style={{background: `linear-gradient(180deg, rgba(255,255,266,1) ${x.collected/(x.id*(x.amount*10))*100}%, rgba(244,0,0,0.6292892156862745) 100%)`}}
+                >
+
+
                   {x.amount}
                 </div>
                 {x.canCreate && !x.created && <div className='column'  id={x.id} onClick={this.newButton}>
@@ -144,7 +148,6 @@ class Main extends React.Component {
                 <button onClick={this.handleSubmit}/>
               </form>
             </div>
-            <button className="modal-close is-large" aria-label="close" onClick={this.toggleModal}></button>
           </div>}
         </div>
       </div>
