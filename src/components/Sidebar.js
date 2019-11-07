@@ -1,6 +1,5 @@
 import React from 'react'
 
-import {Resources} from './Resources'
 
 import{resourcesArr} from './Main'
 
@@ -26,18 +25,13 @@ class Sidebar extends React.Component {
 
 
 
-  resourcesCheck(){
 
-    if(Resources.resourceA >= 20){
-      stuff.resourceB = true
-    }
-  }
 
   componentDidMount() {
 
     this.interval = setInterval(() => {
       this.setState({ time: 1 })
-      this.resourcesCheck()
+
     }, 100)
 
   }
@@ -54,12 +48,10 @@ class Sidebar extends React.Component {
 
     return(
       <div>
-        <h2>resourceA:{Resources.resourceA}</h2>
-        {stuff.resourceB && <h2>resourceB:{Resources.resourceB}</h2>}
         {resourcesArr &&
           resourcesArr.map(x => {
             return <div key={x.id} className='resources'>
-              {x.name}: {x.collected}
+              {x.resource}: {x.collected}
             </div>
           })}
       </div>
