@@ -9,6 +9,11 @@
 
 }
 
+.upgrade{
+  border-left:  1px solid black;
+
+}
+
 .parent{
   display: inline-flex;
   flex-wrap: wrap;
@@ -21,6 +26,8 @@
   border: 2px solid black;
   cursor: pointer;
   margin: 1em;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .sidebar{
@@ -60,4 +67,9 @@ input{
     height: 2em;
     border-color: rgba(220, 0, 0, 0.8);
   }
+}
+
+.unlockUp{
+  cursor: pointer;
+  display: inline-block
 }
