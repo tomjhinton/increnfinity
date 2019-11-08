@@ -163,7 +163,7 @@ class Main extends React.Component {
 
         {this.state.upgrades === false && resourcesArr.length> 5 && <h2 className='unlockUp' onClick={this.unlockUpgrades}    style={{background: `linear-gradient(180deg, rgba(255,255,266,1) ${(this.state.total.total/50000)*100}%, rgba(244,0,0,0.6292892156862745) 100%)`}}  >UNLOCK UPGRADES </h2>}
 
-        {this.state.total.total > 500000*Math.pow(this.state.multiplier, this.state.multiplyCost) && <h2 className='multiplier' onClick={this.multiply}    style={{background: `linear-gradient(180deg, rgba(255,255,266,1) ${(this.state.total.total/50000)*100}%, rgba(244,0,0,0.6292892156862745) 100%)`}}>Invest all profits</h2>}
+        {this.state.total.total > 500000*Math.pow(this.state.multiplier, this.state.multiplyCost) && <h2 className='multiplier' onClick={this.multiply} >INVEST</h2>}
 
         <hr/>
 
