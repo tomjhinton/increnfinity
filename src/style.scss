@@ -19,8 +19,15 @@
   flex-wrap: wrap;
   margin-top: 0.5em;
   margin-right: 20em;
+
 }
 
+.main{
+  z-index:1;
+  height: calc(100vh - 300px);
+  overflow-y: auto;
+
+}
 
 .resources{
   border: 2px solid black;
@@ -28,6 +35,18 @@
   margin: 1em;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.resourcesM{
+  border: 2px solid black;
+  cursor: pointer;
+  margin: 1em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 4em;
+  .bname{
+
+  }
 }
 
 .sidebar{
@@ -47,9 +66,6 @@
 }
 
 
-container{
-  background: linear-gradient(180deg, rgba(2,0,36,0.39119397759103647) 50%, rgba(226,226,226,0.6292892156862745) 100%);
-}
 
 input{
   padding: 1em;
@@ -70,6 +86,30 @@ input{
 }
 
 .unlockUp{
+  margin-right:5em;
+  border: 1px solid black;
+  padding: 0.3em;
   cursor: pointer;
-  display: inline-block
+  display: inline-flex
+}
+
+.multiplier{
+  margin-right:5em;
+  display: inline-flex;
+  border: 1px solid black;
+  padding: 0.3em;
+  cursor: pointer;
+
+}
+
+.total{
+  margin-right:5em;
+  display: inline-flex;
+  padding: 0.3em;
+
+}
+
+hr{
+  border: 1px solid black;
+  width: 80%;
 }
