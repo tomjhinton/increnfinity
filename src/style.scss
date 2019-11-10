@@ -23,9 +23,11 @@
 }
 
 .main{
+  display: flex;
   z-index:1;
   height: calc(100vh - 300px);
   overflow-y: auto;
+  align-content: flex-start;
 
 }
 

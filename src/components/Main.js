@@ -34,22 +34,6 @@ class Main extends React.Component {
   }
 
 
-  update(){
-    let total = resourcesArr.map(x => x = x.collected*x.id)
-    total = total.reduce((a,b)=> a+b,0)
-    resourcesArr.map(x=> x.collected += ((1/x.id)*x.amount)*x.upgradeLevel)
-    resourcesArr.map(x=> {
-      if(x.collected > x.id*100){
-        x.canCreate = true
-      }
-      if(x.collected < x.id*100){
-        x.canCreate = false
-      }
-    })
-
-    this.setState({...this.state, total: {total} })
-  }
-
 
   componentDidMount() {
 
@@ -68,6 +52,21 @@ class Main extends React.Component {
     if (n >= 1e12) return +(n / 1e12).toFixed(1) + 'T'
   }
 
+  update(){
+    let total = resourcesArr.map(x => x = x.collected*x.id)
+    total = total.reduce((a,b)=> a+b,0)
+    resourcesArr.map(x=> x.collected += ((1/x.id)*x.amount)*x.upgradeLevel)
+    resourcesArr.map(x=> {
+      if(x.collected > x.id*100){
+        x.canCreate = true
+      }
+      if(x.collected < x.id*100){
+        x.canCreate = false
+      }
+    })
+
+    this.setState({...this.state, total: {total} })
+  }
 
   resourceCreator(name, building) {
     this.resource = name
